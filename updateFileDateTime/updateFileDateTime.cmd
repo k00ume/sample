@@ -1,11 +1,11 @@
 @powershell -NoProfile -ExecutionPolicy RemoteSigned -Command "&([ScriptBlock]::Create((Get-Content '%~f0'|?{$_.ReadCount -gt 1}|Out-String)))" %* & goto:eof
 
-# ãƒ•ã‚¡ã‚¤ãƒ«ã®ä½œæˆæ—¥æ™‚ã€æ›´æ–°æ—¥æ™‚ã€ã‚¢ã‚¯ã‚»ã‚¹æ—¥æ™‚ã‚’ä¸€æ‹¬å¤‰æ›´
+# ƒtƒ@ƒCƒ‹‚Ìì¬“úAXV“úAƒAƒNƒZƒX“ú‚ğˆêŠ‡•ÏX
 
-# å¯¾è±¡ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹
+# ‘ÎÛƒtƒ@ƒCƒ‹ƒpƒX
 ${target_path} = '.\target.txt'
 
-# å¯¾è±¡æ—¥æ™‚
+# ‘ÎÛ“ú
 ${target_datetime} = '2020/02/29 12:34:56'
 
 'CreationTime', 'LastWriteTime', 'LastAccessTime' | % {
