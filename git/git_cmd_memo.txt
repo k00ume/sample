@@ -1,0 +1,58 @@
+○gitコマンド
+
+# git pushでミスったら
+git fetch "origin"
+git reset --mixed origin/main
+
+# ソースコミット
+git pull --progress -v --no-rebase "origin"
+git checkout -b feature_xxx
+
+cp -p ~/Desktop/work/Abcd.java xxx/yyy/zzz/
+cp -p ~/Desktop/work/wxyz.sql  aaa/bbb/ccc/
+
+cat << EOS | xargs git add
+xxx/yyy/zzz/Abcd.java
+aaa/bbb/ccc/wxyz.sql
+EOS
+git commit -m "ああああ"
+
+git push --progress "origin" feature_xxx
+
+git checkout main
+
+# マージ
+git checkout feature_another
+git pull --progress -v --no-rebase "origin"
+
+git merge --no-edit feature_xxx
+git merge --no-edit feature_yyy
+git merge --no-edit feature_zzz
+
+git push --progress "origin" feature_another
+git checkout main
+
+# マージ中止する場合
+git merge --abort
+
+# 直前のコミットを取り消す
+git reset --mixed HEAD^
+
+# ファイル、ディレクトリを元に戻す
+git checkout xxx/yyy/zzz/wxyz.sql
+
+# ローカルfeatureブランチ削除
+git fetch --prune --progress -v "origin"
+git remote prune "origin"
+git branch -d feature_xxx
+git branch -d feature_yyy
+git branch -d feature_zzz
+
+# revert
+git pull --progress -v --no-rebase "origin"
+git checkout -b feature_xxx
+
+git revert 1234567890abcdef1234567890abcdef12345678 --no-edit
+
+git push --progress "origin" feature_xxx
+git checkout main
