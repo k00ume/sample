@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 public class Google {
 
-    public static WebDriver edgeDriver() {
+    private static WebDriver edgeDriver() {
         var options = new EdgeOptions();
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.setExperimentalOption("excludeSwitches", List.of("enable-automation", "enable-logging"));
@@ -18,7 +18,7 @@ public class Google {
         return driver;
     }
 
-    public static void exec(WebDriver driver) {
+    private static void exec(WebDriver driver) {
         driver.get("https://www.google.com/");
         driver.findElement(By.id("APjFqb")).sendKeys("selenium");
         driver.findElements(By.name("btnK")).get(1).click();
