@@ -1,0 +1,12 @@
+○登録不要で使える
+・Perplexity
+　https://www.perplexity.ai/
+
+・Chatbot Arena
+　匿名のAIチャットボットを比較（して良い方に投票）
+　AIの名前は聞けば多くは教えてくれる（が投票は無効になる）
+　https://lmarena.ai/
+
+○Twitterログインが必要
+・Grok
+　https://grok.com/
