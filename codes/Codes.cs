@@ -14,7 +14,7 @@ public class Codes
         var pattern = "*.html";
         var reg = new Regex(@"<td>([\dA-Za-z]{16})</td>");
 
-        var codes = from html in Directory.GetFiles(path, pattern)
+        var codes = from html in Directory.EnumerateFiles(path, pattern)
                     from line in File.ReadLines(html)
                     let match = reg.Match(line)
                     where match.Success
