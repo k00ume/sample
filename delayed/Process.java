@@ -24,8 +24,8 @@ public class Process {
 
         // 適当な形式の文字列に変換
         var ymdhms = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")
-                                      .withZone(ZoneId.systemDefault())
-                                      .format(fileTime.toInstant());
+                .withZone(ZoneId.systemDefault())
+                .format(fileTime.toInstant());
         System.out.println("(yyyy/MM/dd HH:mm:ss)\t:\t" + ymdhms);
 
         // 入力ファイルを削除

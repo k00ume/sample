@@ -18,11 +18,10 @@ public class PrettyPrintHtml {
 
             // HTMLを出力
             Files.writeString(
-                Path.of("pretty-print.html"),
-                doc.outerHtml(),
-                StandardOpenOption.CREATE,
-                StandardOpenOption.TRUNCATE_EXISTING
-            );
+                    Path.of("pretty-print.html"),
+                    doc.outerHtml(),
+                    StandardOpenOption.CREATE,
+                    StandardOpenOption.TRUNCATE_EXISTING);
 
         } else {
             System.err.println("HTMLファイルが指定されていません。");
