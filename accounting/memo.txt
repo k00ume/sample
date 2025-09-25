@@ -1,0 +1,10 @@
+■Tomcat 9 + Java 21 + Struts 2.5 + Oracle の会計情報システムサンプル
+
+実行手順
+Oracle DBにスキーマ作成＆初期データ投入
+
+DBUtil の接続情報を環境に合わせて変更
+
+Mavenでビルド → WARをTomcat 9のwebappsに配置
+
+http://localhost:8080/accounting/login にアクセス
