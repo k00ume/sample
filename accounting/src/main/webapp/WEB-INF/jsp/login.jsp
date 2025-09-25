@@ -2,6 +2,12 @@
     <%@ taglib prefix="s" uri="/struts-tags" %>
         <html>
 
+        <head>
+            <meta charset="UTF-8">
+            <title>ログイン</title>
+            <link rel="stylesheet" href="css/common.css">
+        </head>
+
         <body>
             <h2>ログイン</h2>
             <s:form action="doLogin">

@@ -2,6 +2,12 @@
     <%@ taglib prefix="s" uri="/struts-tags" %>
         <html>
 
+        <head>
+            <meta charset="UTF-8">
+            <title>会計データ一覧</title>
+            <link rel="stylesheet" href="css/common.css">
+        </head>
+
         <body>
             <h2>会計データ一覧</h2>
             <table border="1">
