@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.action.extension" value="" />
+    <package name="accounting" namespace="/" extends="struts-default">
+        <action name="login">
+            <result>/WEB-INF/jsp/login.jsp</result>
+        </action>
+        <action name="doLogin" class="com.example.accounting.action.LoginAction">
+            <result name="input">/WEB-INF/jsp/login.jsp</result>
+            <result name="success" type="redirect">list</result>
+        </action>
+        <action name="logout" class="com.example.accounting.action.LogoutAction">
+            <result type="redirect">login</result>
+        </action>
+        <action name="list" class="com.example.accounting.action.ListAction">
+            <result>/WEB-INF/jsp/list.jsp</result>
+        </action>
+        <action name="entry">
+            <result>/WEB-INF/jsp/entry.jsp</result>
+        </action>
+        <action name="doEntry" class="com.example.accounting.action.EntryAction">
+            <result name="input">/WEB-INF/jsp/entry.jsp</result>
+            <result name="success" type="redirect">list</result>
+        </action>
+        <action name="delete" class="com.example.accounting.action.DeleteAction">
+            <result type="redirect">list</result>
+        </action>
+    </package>
+</struts>
